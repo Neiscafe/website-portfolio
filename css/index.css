@@ -22,23 +22,27 @@ body.modo-escuro {
 body {
     font-family: sans-serif;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
     margin: 0px;
 }
 
 #nav-principal {
-    width: 20%;
+    width: 50vh;
     height: 100vh;
+    min-width: 50vh;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     padding-left: 1%;
     background: var(--cor-fundo);
     box-shadow: var(--sombra-caixa)
 }
 
-#nav-principal-header{
+#nav-principal-header {
     margin: 5% 0% 0% 5%;
 }
+
 .nav-principal-header-item {
     margin: 0px 0px 0vh 0px;
 }
@@ -58,7 +62,6 @@ body {
 .nav-principal-bt {
     width: 100%;
     text-align: start;
-
     font-size: larger;
     padding: 5% 0% 5% 6%;
     color: rgb(29, 29, 29);
@@ -73,6 +76,12 @@ body {
 
 .nav-principal-bt:hover {
     background-color: #f1f1f1ff
+}
+
+#container-pagina {
+    padding: 3vh 0% 0% 5vh;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .switch {
@@ -132,4 +141,10 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
 }
