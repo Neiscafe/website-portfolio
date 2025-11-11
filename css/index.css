@@ -18,45 +18,118 @@ body.modo-escuro {
     --sombra-caixa: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-ul {
-    width: 100%;
-}
 
 body {
+    font-family: sans-serif;
     display: flex;
+    flex-direction: row;
+    margin: 0px;
 }
 
 #nav-principal {
     width: 20%;
-}
-
-#nav-principal-menu {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    padding-left: 1%;
+    background: var(--cor-fundo);
+    box-shadow: var(--sombra-caixa)
 }
 
-ul {
-    padding: 0px;
-    margin: 0px;
+#nav-principal-header{
+    margin: 5% 0% 0% 5%;
+}
+.nav-principal-header-item {
+    margin: 0px 0px 0vh 0px;
 }
 
-li {
+#alternador-tema {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    margin: 5% 5% 0% 0%;
+}
+
+#nav-principal-menu li {
     list-style: none;
-    margin-bottom: 16%;
 }
 
 .nav-principal-bt {
     width: 100%;
-    height: 300%;
     text-align: start;
-    padding-left: 6%;
+
+    font-size: larger;
+    padding: 5% 0% 5% 6%;
     color: rgb(29, 29, 29);
-    border-radius: 8px;
     border: transparent;
-    background-color: transparent;
+    background: transparent;
 }
 
-.nav-principal-bt:hover{
-    background-color: rgb(245, 245, 245);
+#nav-principal-menu {
+    margin: 5% 0% 0% 0%;
+    padding: 0px;
+}
+
+.nav-principal-bt:hover {
+    background-color: #f1f1f1ff
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
