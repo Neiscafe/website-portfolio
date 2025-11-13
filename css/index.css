@@ -205,10 +205,10 @@ input:checked+.slider:before {
     }
 
     #nav-principal {
-        display: inherit;
-        width: 40vw;
-        height: 100vh;
+        display: inline;
         position: absolute;
+        width: fit-content;
+        height: 100%;
     }
 
     .invisivel-mobile {
@@ -216,7 +216,7 @@ input:checked+.slider:before {
     }
 
     .nav-principal-bt {
-        width: 100vw;
+        width: 250px;
     }
 
     #btn-abrir-menu,
