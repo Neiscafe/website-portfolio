@@ -1,24 +1,23 @@
 export function configuraAlternaPaginas() {
     selecionaElemento(document.getElementById("nav-item-1"));
-    document.getElementById("nav-principal-menu")
-        .addEventListener("click", (event) => {
-            selecionaElemento(event.target);
-        });
+    let sidebar = document.getElementById('nav-principal');
+    let containerPagina = document.getElementById('container-pagina');
+    let btnAbrirMenu = document.getElementById("btn-abrir-menu");
+    let btnFecharMenu = document.getElementById("btn-fechar-menu");
+    document.getElementById("nav-principal-menu").addEventListener("click", (event) => {
+        selecionaElemento(event.target);
+        sidebar.classList.add('invisivel-mobile');
+        containerPagina.classList.remove('invisivel-mobile');
+        btnAbrirMenu.classList.remove('invisivel-mobile');
+        btnFecharMenu.classList.add('invisivel-mobile');
+    });
 }
 function selecionaElemento(target) {
-    let sobreMim = document.getElementById("sobre-mim");
-    let formacao = document.getElementById("formacao");
-    let portfolio = document.getElementById("portfolio");
-    let contato = document.getElementById("contato");
-    let navItems = [document.getElementById("nav-item-1"), document.getElementById("nav-item-2"), document.getElementById("nav-item-3"), document.getElementById("nav-item-4")];
     if (target.id == 'nav-principal-menu') {
         return;
     }
-    sobreMim.hidden = target.id !== 'nav-item-1';
-    formacao.hidden = target.id !== 'nav-item-2';
-    portfolio.hidden = target.id !== 'nav-item-3';
-    contato.hidden = target.id !== 'nav-item-4';
-    console.log(target.id);
+    let navItems = [document.getElementById("nav-item-1"), document.getElementById("nav-item-2"), document.getElementById("nav-item-3"), document.getElementById("nav-item-4")];
+    let paginas = [document.getElementById("sobre-mim"), document.getElementById("formacao"), document.getElementById("portfolio"), document.getElementById("contato")];
     let iSelecionado = 0;
     switch (target.id) {
         case 'nav-item-1':
@@ -38,9 +37,16 @@ function selecionaElemento(target) {
     }
     navItems.forEach(function (element, i) {
         if (i == iSelecionado) {
-            element.style.backgroundColor = "#f1f1f1ff";
+            element.classList.add('nav-bt-selecionado');
         } else {
-            element.style.backgroundColor = "#ffffff00";
+            element.classList.remove('nav-bt-selecionado');
+        }
+    });
+    paginas.forEach(function (element, i) {
+        if (i == iSelecionado) {
+            element.classList.remove('invisivel');
+        } else {
+            element.classList.add('invisivel');
         }
     });
 }
