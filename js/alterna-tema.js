@@ -3,6 +3,7 @@ export function configuraAlternador() {
     const body = document.body;
 
     const temaAtual = localStorage.getItem('tema');
+    console.log(temaAtual);
     if (temaAtual == 'escuro') {
         alternadorTema.checked = true;
         body.classList.add('modo-escuro');

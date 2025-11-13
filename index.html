@@ -9,6 +9,10 @@
     <meta charset="utf-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <title>Mobile Dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <!-- <meta name="description" content=""> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/index.css">
@@ -22,12 +26,14 @@
 
     <!-- <script src="" async defer></script> -->
     <div id="overlay"></div>
-    <button id="btn-abrir-menu" class="btn-abrir-menu" aria-label="Abrir menu">☰</button>
+    <button id="btn-abrir-menu" class="btn-abrir-menu roboto-text" aria-label="Abrir menu">☰</button>
     <nav id="nav-principal">
         <div id="nav-principal-header">
-            <button id="btn-fechar-menu" class="btn-fechar-menu" aria-label="Fechar menu">&times;</button>
-            <h2 class="nav-principal-header-item">Portfólio</h2>
-            <h1 class="nav-principal-header-item">Guilherme Neis</h1>
+            <button id="btn-fechar-menu" class="btn-fechar-menu roboto-text" aria-label="Fechar menu">☰</button>
+            <div id="nav-principal-header-text">
+                <h2 class="nav-principal-header-item roboto-title">Portfólio</h2>
+                <h1 class="nav-principal-header-item roboto-title">Guilherme Neis</h1>
+            </div>
         </div>
         <div id="alternador-tema">
             <span>Tema escuro:</span>
@@ -38,25 +44,24 @@
         </div>
         <ul id="nav-principal-menu">
             <li>
-                <button class="nav-principal-bt" type="button" id="nav-item-1">SOBRE MIM</button>
+                <button class="nav-principal-bt roboto-title" type="button" id="nav-item-1">SOBRE MIM</button>
             </li>
             <li>
-                <button class="nav-principal-bt" type="button" id="nav-item-2">FORMAÇÃO</button>
+                <button class="nav-principal-bt roboto-title" type="button" id="nav-item-2">FORMAÇÃO</button>
             </li>
             <li>
-                <button class="nav-principal-bt" type="button" id="nav-item-3">PORTFOLIO</button>
+                <button class="nav-principal-bt roboto-title" type="button" id="nav-item-3">PORTFOLIO</button>
             </li>
             <li>
-                <button class="nav-principal-bt" type="button" id="nav-item-4">CONTATO</button>
+                <button class="nav-principal-bt roboto-title" type="button" id="nav-item-4">CONTATO</button>
             </li>
         </ul>
     </nav>
     <div id="container-pagina">
         <div class="pagina" id="sobre-mim">
-            <h1>Sobre mim</h1>
+            <h1 class="roboto-title">Sobre mim</h1>
             <img src="./res/perfil.jpg"></img>
-            <h2>Olá! Seja bem-vindo ao meu portfólio.
-
+            <p class="roboto-text">Olá! Seja bem-vindo ao meu portfólio.
                 Eu sou [Seu Nome], um estudante de [Nome do seu Curso, ex: Análise e Desenvolvimento de Sistemas]
                 apaixonado
                 por tecnologia e pela capacidade que a programação tem de transformar ideias em soluções reais e
@@ -72,16 +77,16 @@
 
                 Sinta-se à vontade para explorar as outras seções e conhecer um pouco mais sobre minha jornada. Obrigado
                 pela visita!
-            </h2>
+            </p>
         </div>
         <div class="pagina" id="formacao">
-            <h1>Formação</h1>
+            <h1 class="roboto-title">Formação</h1>
         </div>
         <div class="pagina" id="portfolio">
-            <h1>Portfólio</h1>
+            <h1 class="roboto-title">Portfólio</h1>
         </div>
         <div class="pagina" id="contato">
-            <h1>Contato</h1>
+            <h1 class="roboto-title">Contato</h1>
         </div>
     </div>
 </body>

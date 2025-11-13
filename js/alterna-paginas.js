@@ -6,10 +6,10 @@ export function configuraAlternaPaginas() {
     let btnFecharMenu = document.getElementById("btn-fechar-menu");
     document.getElementById("nav-principal-menu").addEventListener("click", (event) => {
         selecionaElemento(event.target);
-        sidebar.classList.add('invisivel-mobile');
-        containerPagina.classList.remove('invisivel-mobile');
-        btnAbrirMenu.classList.remove('invisivel-mobile');
-        btnFecharMenu.classList.add('invisivel-mobile');
+        sidebar.classList.add('invisivel');
+        containerPagina.classList.remove('invisivel');
+        btnAbrirMenu.classList.remove('invisivel');
+        btnFecharMenu.classList.add('invisivel');
     });
 }
 function selecionaElemento(target) {
