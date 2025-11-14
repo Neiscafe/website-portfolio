@@ -142,9 +142,40 @@ p {
     width: 72px;
     height: 72px;
     border-radius: 80px;
-       align-items: center;    /* margin: 1vw 0% 0% 1vw; */
+    align-items: center;
+    /* margin: 1vw 0% 0% 1vw; */
     border: transparent;
     display: block;
+}
+
+#form-contato {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-contato [type="text"],
+#msg {
+    width: 60%;
+    padding: 16px 16px 16px 16px;
+    border-radius: 10px;
+    border-width: 1px;
+    margin-bottom: 20px;
+    border-color: #dadada;
+    border-style: solid;
+    /* border-color: ; */
+}
+
+#form-contato [type="button"] {
+    width: fit-content;
+    padding: 16px 32px 16px 32px;
+    border-radius: 40px;
+    border-width: 1px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #007bff;
+    border-color: transparent;
+    border-style: solid;
+    /* border-color: ; */
 }
 
 #btn-fechar-menu {
@@ -193,14 +224,24 @@ p {
     background-color: #f1f1f1ff
 }
 
+.pagina {
+    margin-bottom: 10%;
+}
+
 #container-pagina {
     display: inherit;
-    padding: 20vw 5vw 5vw 5vw;
+    padding: 72px 5vw 5vw 5vw;
     flex-wrap: wrap;
     width: 100%;
+    /* margin-bottom: 20%; */
     color: var(--cor-texto);
     flex-direction: column;
 }
+
+#container-pagina h1 {
+    font-size: 48px;
+}
+
 button img {
     width: 24px;
     height: 24px;
@@ -321,6 +362,17 @@ input:checked+.slider:before {
         margin-bottom: 0px;
         /* padding: 24px 12px 24px 12px; */
         padding: 0px 0px 0px 0px;
+    }
+
+    #form-contato [type="text"],
+    #msg {
+        width: 100%;
+        padding: 16px 16px 16px 16px;
+        border-radius: 10px;
+        border-width: 1px;
+        margin-bottom: 20px;
+        border-color: #dadada;
+        border-style: solid;
     }
 
     .pagina p {

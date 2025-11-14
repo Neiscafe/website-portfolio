@@ -6,6 +6,9 @@ export function configuraAlternaPaginas() {
     let navItems = [document.getElementById("nav-item-1"), document.getElementById("nav-item-2"), document.getElementById("nav-item-3"), document.getElementById("nav-item-4")];
     let paginas = [document.getElementById("sobre-mim"), document.getElementById("formacao"), document.getElementById("portfolio"), document.getElementById("contato")];
     navBar.classList.add('invisivel');
+    document.getElementById("contato-submit").addEventListener('click', (event) => {
+        onButtonClick(event.target);
+    });
     btnFecharMenu.addEventListener('click', () => {
         navBar.classList.add("invisivel");
     });
@@ -54,4 +57,13 @@ function selecionaElemento(navItems, paginas, target) {
             // element.classList.add('invisivel');
         }
     });
+}
+async function onButtonClick(target) {
+    target.disabled = true;
+    target.value = 'Carregando...';
+    await new Promise(r => setTimeout(r, 1500));
+    target.value = 'Enviado!';
+    await new Promise(r => setTimeout(r, 1000));
+    target.value = 'Enviar';
+    target.disabled = false;
 }
