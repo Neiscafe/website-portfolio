@@ -153,10 +153,11 @@ p {
     border: transparent;
     background-color: transparent;
 }
+
 .nav-principal-bt img {
-   width: 24px;
-   height: 24px;
-   margin-right: 12px;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
 }
 
 #nav-principal-menu {
@@ -248,7 +249,9 @@ input:checked+.slider:before {
     #btn-abrir-menu {
         display: none;
     } */
-
+  .pagina p {
+        max-width:40vw;
+    }
     #nav-principal {
         display: flex;
     }
@@ -285,6 +288,10 @@ input:checked+.slider:before {
         padding: 3vh 3vw 3vh 3vw;
         border: transparent;
         background-color: transparent;
+    }
+
+    .pagina p {
+        max-width: 100vw;
     }
 
     .nav-bt-selecionado {
