@@ -26,10 +26,10 @@
 
     <!-- <script src="" async defer></script> -->
     <div id="overlay"></div>
-    <button id="btn-abrir-menu" class="btn-abrir-menu roboto-text" aria-label="Abrir menu">☰</button>
     <nav id="nav-principal">
         <div id="nav-principal-header">
-            <button id="btn-fechar-menu" class="btn-fechar-menu roboto-text" aria-label="Fechar menu">☰</button>
+            <button id="btn-fechar-menu" class="btn-fechar-menu roboto-text" aria-label="Fechar menu"><img
+                    src="res/menu_open_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"></img></button>
             <div id="nav-principal-header-text">
                 <h2 class="nav-principal-header-item roboto-title">Portfólio</h2>
                 <h1 class="nav-principal-header-item roboto-title">Guilherme Neis</h1>
@@ -62,42 +62,105 @@
             </li>
         </ul>
     </nav>
-    <div id="container-pagina">
-        <div class="pagina" id="sobre-mim">
-            <h1 class="roboto-title">Sobre mim</h1>
-            <img src="./res/perfil.jpg"></img>
-            <p class="roboto-text">
-                Olá! Seja bem-vindo ao meu portfólio.
-                Eu sou
-                <strong>Guilherme Neis</strong>, um estudante de <strong>Ciência da Computação</strong>
-                apaixonado
-                por tecnologia e pela capacidade que a programação tem de transformar ideias em soluções reais e
-                funcionais.
-            </p>
-            <p class="roboto-text">
-                Atualmente, estou focado em aprimorar minhas habilidades em <strong>desenvolvimento web
-                    front-end</strong>, explorando o
-                poder do HTML, CSS e JavaScript nativo para criar interfaces limpas, responsivas e agradáveis ao
-                usuário.
-            </p>
-            <p class="roboto-text">
-                Este site é um reflexo direto do meu aprendizado e dedicação. Aqui você encontrará detalhes sobre minha
-                formação acadêmica e uma seleção dos projetos que desenvolvi. Meu objetivo é continuar crescendo como
-                desenvolvedor,<strong> enfrentando novos desafios</strong> e contribuindo para <strong>projetos
-                    inovadores.</strong>
-            <p class="roboto-text">
-                Sinta-se à vontade para explorar as outras seções e conhecer um pouco mais sobre minha jornada. Obrigado
-                pela visita!
-            </p>
+    <div id="container-top-bar">
+        <div id="top-bar">
+            <button id="btn-abrir-menu" class="btn-abrir-menu roboto-text" aria-label="Abrir menu"><img
+                    src="res/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"></img></button>
         </div>
-        <div class="pagina" id="formacao">
-            <h1 class="roboto-title">Formação</h1>
-        </div>
-        <div class="pagina" id="portfolio">
-            <h1 class="roboto-title">Portfólio</h1>
-        </div>
-        <div class="pagina" id="contato">
-            <h1 class="roboto-title">Contato</h1>
+        <div id="container-pagina">
+            <div class="pagina" id="sobre-mim">
+                <h1 class="roboto-title">Sobre mim</h1>
+                <img src="./res/perfil.jpg"></img>
+                <p class="roboto-text">
+                    Olá! Seja bem-vindo ao meu portfólio.
+                    Eu sou
+                    <strong>Guilherme Neis</strong>, um estudante de <strong>Ciência da Computação</strong>
+                    apaixonado
+                    por tecnologia e pela capacidade que a programação tem de transformar ideias em soluções reais e
+                    funcionais.
+                </p>
+                <p class="roboto-text">
+                    Atualmente, estou focado em aprimorar minhas habilidades em <strong>desenvolvimento web
+                        front-end</strong>, explorando o
+                    poder do HTML, CSS e JavaScript nativo para criar interfaces limpas, responsivas e agradáveis ao
+                    usuário.
+                </p>
+                <p class="roboto-text">
+                    Este site é um reflexo direto do meu aprendizado e dedicação. Aqui você encontrará detalhes sobre
+                    minha
+                    formação acadêmica e uma seleção dos projetos que desenvolvi. Meu objetivo é continuar crescendo
+                    como
+                    desenvolvedor,<strong> enfrentando novos desafios</strong> e contribuindo para <strong>projetos
+                        inovadores.</strong>
+                <p class="roboto-text">
+                    Sinta-se à vontade para explorar as outras seções e conhecer um pouco mais sobre minha jornada.
+                    Obrigado
+                    pela visita!
+                </p>
+            </div>
+            <div class="pagina roboto-text" id="formacao">
+                <h1 class="roboto-title">Formação</h1>
+                <strong>Habilidades técnicas:</strong>
+                <ul>
+                    <li>
+                        Aplicativos Android (Kotlin/Java, Jetpack Compose).
+                    </li>
+                    <li>
+                        Aplicativos Flutter.
+                    </li>
+                    <li>
+                        Back-end (PHP/Java Spring).
+                    </li>
+                    <li>
+                        Bancos de dados (MySQL/SQLite).
+                    </li>
+                </ul>
+
+
+                <strong>Uninter - Ciência da Computação:</strong>
+                <ul>
+                    <li>
+                        Conclusão prevista para: 2027
+                    </li>
+                    <li>
+                        Destaques:
+                    </li>
+                    <ul>
+
+                        <li>
+                            Projeto: Comunicação entre prefeitura e cidadão por meio de aplicativo de rede social
+                            focado
+                            em
+                            estado de infraestrutura.
+                        </li>
+                        <li>
+                            Desenvolvimento de aplicações Web, Mobile e Back-end.
+                        </li>
+                        <li>
+                            Conhecimento aprofundado em bancos de dados.
+                        </li>
+                    </ul>
+                </ul>
+
+                <strong>IFSul - Técnico em Informática:</strong>
+                <ul>
+                    <li>Concluído: 2023</li>
+                    <li>Destaques:</li>
+                    <ul>
+                        <li>
+                            Propriedade intelectual: Gerenciamento de cantina estudantil em Java com interface
+                            Desktop/Android
+                        </li>
+                    </ul>
+                </ul>
+
+            </div>
+            <div class="pagina" id="portfolio">
+                <h1 class="roboto-title">Portfólio</h1>
+            </div>
+            <div class="pagina" id="contato">
+                <h1 class="roboto-title">Contato</h1>
+            </div>
         </div>
     </div>
 </body>

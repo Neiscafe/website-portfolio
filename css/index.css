@@ -83,7 +83,9 @@ p {
     height: 100vh;
     min-width: fit-content;
     flex-direction: column;
+    z-index: 2;
     flex-wrap: wrap;
+    position: fixed;
     padding: 1vw 1vw 0% 1vw;
     background: var(--cor-sidebar);
     box-shadow: var(--sombra-caixa)
@@ -93,6 +95,18 @@ p {
     margin-top: 5%;
     display: flex;
     flex-direction: column;
+}
+
+#top-bar {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    padding: 0%;
+    height: fit-content;
+    /* margin-bottom: 48px;
+    padding: 24px 12px 24px 12px; */
+    background: var(--cor-fundo);
+    box-shadow: var(--sombra-caixa)
 }
 
 #nav-principal-header {
@@ -128,7 +142,7 @@ p {
     width: 72px;
     height: 72px;
     border-radius: 80px;
-    margin: 1vw 0% 0% 1vw;
+       align-items: center;    /* margin: 1vw 0% 0% 1vw; */
     border: transparent;
     display: block;
 }
@@ -137,6 +151,7 @@ p {
     width: 72px;
     height: 72px;
     border-radius: 80px;
+    align-items: center;
     border: transparent;
     display: block;
 }
@@ -169,17 +184,26 @@ p {
     background-color: var(--cor-borda);
 }
 
+#container-top-bar {
+    display: flex;
+    flex-direction: column;
+}
+
 .nav-bt-selecionado {
     background-color: #f1f1f1ff
 }
 
 #container-pagina {
     display: inherit;
-    padding: 5% 5% 5% 5%;
+    padding: 20vw 5vw 5vw 5vw;
     flex-wrap: wrap;
     width: 100%;
     color: var(--cor-texto);
     flex-direction: column;
+}
+button img {
+    width: 24px;
+    height: 24px;
 }
 
 .switch {
@@ -242,6 +266,7 @@ input:checked+.slider:before {
 }
 
 @media (min-width: 1280px) {
+
     /* #btn-fechar-menu {
         display: none;
     }
@@ -249,9 +274,10 @@ input:checked+.slider:before {
     #btn-abrir-menu {
         display: none;
     } */
-  .pagina p {
-        max-width:40vw;
+    .pagina p {
+        max-width: 40vw;
     }
+
     #nav-principal {
         display: flex;
     }
@@ -267,7 +293,7 @@ input:checked+.slider:before {
     }
 
     #btn-abrir-menu {
-        margin: 24px 0% 0% 24px;
+        /* margin: 24px 0% 0% 24px; */
     }
 
 
@@ -288,6 +314,13 @@ input:checked+.slider:before {
         padding: 3vh 3vw 3vh 3vw;
         border: transparent;
         background-color: transparent;
+    }
+
+    #top-bar {
+        /* margin-bottom: 48px; */
+        margin-bottom: 0px;
+        /* padding: 24px 12px 24px 12px; */
+        padding: 0px 0px 0px 0px;
     }
 
     .pagina p {

@@ -3,43 +3,25 @@ export function configuraAlternaPaginas() {
     let containerPagina = document.getElementById('container-pagina');
     let btnAbrirMenu = document.getElementById("btn-abrir-menu");
     let btnFecharMenu = document.getElementById("btn-fechar-menu");
-    let disabilitaScroll = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-    };
+    let navItems = [document.getElementById("nav-item-1"), document.getElementById("nav-item-2"), document.getElementById("nav-item-3"), document.getElementById("nav-item-4")];
+    let paginas = [document.getElementById("sobre-mim"), document.getElementById("formacao"), document.getElementById("portfolio"), document.getElementById("contato")];
     navBar.classList.add('invisivel');
-    btnFecharMenu.classList.add('invisivel');
     btnFecharMenu.addEventListener('click', () => {
-        navBar.removeEventListener('wheel', disabilitaScroll);
-        navBar.removeEventListener('touchmove', disabilitaScroll);
         navBar.classList.add("invisivel");
-        containerPagina.removeEventListener('wheel', disabilitaScroll);
-        btnAbrirMenu.classList.remove('invisivel');
-        btnFecharMenu.classList.add('invisivel');
     });
     btnAbrirMenu.addEventListener('click', () => {
-        navBar.addEventListener('wheel', disabilitaScroll);
-        navBar.addEventListener('touchmove', disabilitaScroll);
         navBar.classList.remove("invisivel");
-        containerPagina.addEventListener('wheel', disabilitaScroll);
-        btnAbrirMenu.classList.add('invisivel');
-        btnFecharMenu.classList.remove('invisivel');
     });
     document.getElementById("nav-principal-menu").addEventListener("click", (event) => {
-        selecionaElemento(event.target);
+        selecionaElemento(navItems, paginas, event.target);
         navBar.classList.add('invisivel');
-        containerPagina.classList.remove('invisivel');
-        btnAbrirMenu.classList.remove('invisivel');
-        btnFecharMenu.classList.add('invisivel');
     });
     selecionaElemento(document.getElementById("nav-item-1"));
 }
-function selecionaElemento(target) {
+function selecionaElemento(navItems, paginas, target) {
     if (target.id == 'nav-principal-menu') {
         return;
     }
-    let navItems = [document.getElementById("nav-item-1"), document.getElementById("nav-item-2"), document.getElementById("nav-item-3"), document.getElementById("nav-item-4")];
-    let paginas = [document.getElementById("sobre-mim"), document.getElementById("formacao"), document.getElementById("portfolio"), document.getElementById("contato")];
     let iSelecionado = 0;
     switch (target.id) {
         case 'nav-item-1':
@@ -66,9 +48,10 @@ function selecionaElemento(target) {
     });
     paginas.forEach(function (element, i) {
         if (i == iSelecionado) {
-            element.classList.remove('invisivel');
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // element.classList.remove('invisivel');
         } else {
-            element.classList.add('invisivel');
+            // element.classList.add('invisivel');
         }
     });
 }
