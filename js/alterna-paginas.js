@@ -11,6 +11,7 @@ export function configuraAlternaPaginas() {
     btnFecharMenu.classList.add('invisivel');
     btnFecharMenu.addEventListener('click', () => {
         navBar.removeEventListener('wheel', disabilitaScroll);
+        navBar.removeEventListener('touchmove', disabilitaScroll);
         navBar.classList.add("invisivel");
         containerPagina.removeEventListener('wheel', disabilitaScroll);
         btnAbrirMenu.classList.remove('invisivel');
@@ -18,6 +19,7 @@ export function configuraAlternaPaginas() {
     });
     btnAbrirMenu.addEventListener('click', () => {
         navBar.addEventListener('wheel', disabilitaScroll);
+        navBar.addEventListener('touchmove', disabilitaScroll);
         navBar.classList.remove("invisivel");
         containerPagina.addEventListener('wheel', disabilitaScroll);
         btnAbrirMenu.classList.add('invisivel');
