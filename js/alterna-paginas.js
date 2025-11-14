@@ -1,16 +1,36 @@
 export function configuraAlternaPaginas() {
-    selecionaElemento(document.getElementById("nav-item-1"));
-    let sidebar = document.getElementById('nav-principal');
+    let navBar = document.getElementById('nav-principal');
     let containerPagina = document.getElementById('container-pagina');
     let btnAbrirMenu = document.getElementById("btn-abrir-menu");
     let btnFecharMenu = document.getElementById("btn-fechar-menu");
+    let disabilitaScroll = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+    };
+    navBar.classList.add('invisivel');
+    btnFecharMenu.classList.add('invisivel');
+    btnFecharMenu.addEventListener('click', () => {
+        navBar.removeEventListener('wheel', disabilitaScroll);
+        navBar.classList.add("invisivel");
+        containerPagina.removeEventListener('wheel', disabilitaScroll);
+        btnAbrirMenu.classList.remove('invisivel');
+        btnFecharMenu.classList.add('invisivel');
+    });
+    btnAbrirMenu.addEventListener('click', () => {
+        navBar.addEventListener('wheel', disabilitaScroll);
+        navBar.classList.remove("invisivel");
+        containerPagina.addEventListener('wheel', disabilitaScroll);
+        btnAbrirMenu.classList.add('invisivel');
+        btnFecharMenu.classList.remove('invisivel');
+    });
     document.getElementById("nav-principal-menu").addEventListener("click", (event) => {
         selecionaElemento(event.target);
-        sidebar.classList.add('invisivel');
+        navBar.classList.add('invisivel');
         containerPagina.classList.remove('invisivel');
         btnAbrirMenu.classList.remove('invisivel');
         btnFecharMenu.classList.add('invisivel');
     });
+    selecionaElemento(document.getElementById("nav-item-1"));
 }
 function selecionaElemento(target) {
     if (target.id == 'nav-principal-menu') {

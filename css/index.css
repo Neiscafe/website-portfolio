@@ -69,7 +69,7 @@ body {
 
 p {
     text-align: justify;
-    font-size: larger;
+    /* font-size: larger; */
 }
 
 .invisivel {
@@ -84,19 +84,20 @@ p {
     min-width: fit-content;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-left: 1%;
+    padding: 1vw 1vw 0% 1vw;
     background: var(--cor-sidebar);
     box-shadow: var(--sombra-caixa)
 }
 
-#nav-principal-header-text{
+#nav-principal-header-text {
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
 }
 
 #nav-principal-header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     /* margin: 5% 0% 0% 5%; */
 }
 
@@ -111,7 +112,7 @@ p {
     justify-content: end;
     flex-direction: row;
     align-items: center;
-    padding: 5% 5% 0% 0%;
+    padding: 5% 0% 0% 0%;
     color: var(--cor-texto);
 }
 
@@ -123,29 +124,21 @@ p {
     cursor: pointer;
 }
 
-#btn-abrir-menu{
-    width: 72px;
-    height: 72px;
-    border-radius: 80px;
-    border: transparent;
-    display: block;
-}
-#btn-fechar-menu {
-    width: 72px;
-    height: 72px;
-    border-radius: 80px;
-    border: transparent;
-    display: block;
-}
-
-#btn-fechar-menu {
-    background-color: transparent;
-    border: var(--cor-borda);
-    /* margin: 0% 0% 10% -10%; */
-}
-
 #btn-abrir-menu {
-    /* margin: 5% 0% 0% 6%; */
+    width: 72px;
+    height: 72px;
+    border-radius: 80px;
+    margin: 1vw 0% 0% 1vw;
+    border: transparent;
+    display: block;
+}
+
+#btn-fechar-menu {
+    width: 72px;
+    height: 72px;
+    border-radius: 80px;
+    border: transparent;
+    display: block;
 }
 
 .nav-principal-bt {
@@ -153,10 +146,17 @@ p {
     text-align: start;
     border-radius: 80px;
     height: auto;
+    display: flex;
+    align-items: center;
     color: var(--cor-texto);
     padding: 5% 0% 5% 6%;
     border: transparent;
     background-color: transparent;
+}
+.nav-principal-bt img {
+   width: 24px;
+   height: 24px;
+   margin-right: 12px;
 }
 
 #nav-principal-menu {
@@ -260,10 +260,35 @@ input:checked+.slider:before {
     }
 
     #nav-principal {
+        padding: 24px 24px 24px 24px;
+    }
+
+    #btn-abrir-menu {
+        margin: 24px 0% 0% 24px;
+    }
+
+
+    #nav-principal {
         display: inline;
         position: absolute;
         width: fit-content;
         height: 100%;
+    }
+
+    .nav-principal-bt {
+        width: 300px;
+        text-align: start;
+        border-radius: 20px;
+        height: auto;
+        color: var(--cor-texto);
+        margin: 0% 0% 24px 0%;
+        padding: 3vh 3vw 3vh 3vw;
+        border: transparent;
+        background-color: transparent;
+    }
+
+    .nav-bt-selecionado {
+        background-color: #f1f1f1
     }
 
     .invisivel-mobile {
