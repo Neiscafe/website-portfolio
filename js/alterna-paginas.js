@@ -5,9 +5,11 @@ export function configuraAlternaPaginas() {
     let btnFecharMenu = document.getElementById("btn-fechar-menu");
     let navItems = [document.getElementById("nav-item-1"), document.getElementById("nav-item-2"), document.getElementById("nav-item-3"), document.getElementById("nav-item-4")];
     let paginas = [document.getElementById("sobre-mim"), document.getElementById("formacao"), document.getElementById("portfolio"), document.getElementById("contato")];
+    let campoEmail = document.getElementById("campo-email");
+    let campoMsg = document.getElementById("campo-msg");
     navBar.classList.add('invisivel');
     document.getElementById("contato-submit").addEventListener('click', (event) => {
-        onButtonClick(event.target);
+        onButtonClick(event.target, campoEmail, campoMsg);
     });
     btnFecharMenu.addEventListener('click', () => {
         navBar.classList.add("invisivel");
@@ -58,12 +60,16 @@ function selecionaElemento(navItems, paginas, target) {
         }
     });
 }
-async function onButtonClick(target) {
+async function onButtonClick(target, campoEmail, campoMsg) {
     target.disabled = true;
     target.value = 'Carregando...';
+    campoEmail.disabled = true;
+    campoMsg.disabled = true;
     await new Promise(r => setTimeout(r, 1500));
     target.value = 'Enviado!';
     await new Promise(r => setTimeout(r, 1000));
     target.value = 'Enviar';
+    campoEmail.disabled = false;
+    campoMsg.disabled = false;
     target.disabled = false;
 }

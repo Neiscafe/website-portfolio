@@ -230,7 +230,7 @@ p {
 
 #container-pagina {
     display: inherit;
-    padding: 72px 5vw 5vw 5vw;
+    padding: 72px 10vw 5vw 10vw;
     flex-wrap: wrap;
     width: 100%;
     /* margin-bottom: 20%; */
@@ -339,8 +339,7 @@ input:checked+.slider:before {
 
 
     #nav-principal {
-        display: inline;
-        position: absolute;
+        /* display: inline; */
         width: fit-content;
         height: 100%;
     }
@@ -365,7 +364,7 @@ input:checked+.slider:before {
     }
 
     #form-contato [type="text"],
-    #msg {
+    #campo-msg {
         width: 100%;
         padding: 16px 16px 16px 16px;
         border-radius: 10px;
