@@ -24,7 +24,7 @@ export function configuraAlternaPaginas() {
     selecionaElemento(document.getElementById("nav-item-1"));
 }
 function selecionaElemento(navItems, paginas, target) {
-    if (target.id == 'nav-principal-menu') {
+    if ( target == null || target.id == 'nav-principal-menu') {
         return;
     }
     let iSelecionado = 0;
