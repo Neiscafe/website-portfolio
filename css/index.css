@@ -6,6 +6,7 @@ body {
     --cor-destaque-hover: #0056b3;
     --cor-borda: #e0e0e0;
     --sombra-caixa: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --botoes-svg: invert(0%);
 }
 
 body.modo-escuro {
@@ -16,6 +17,7 @@ body.modo-escuro {
     --cor-destaque-hover: #1e88e5;
     --cor-borda: #333333;
     --sombra-caixa: 0 4px 12px rgba(0, 0, 0, 0.2);
+    --botoes-svg: invert(100%);
 }
 
 *,
@@ -138,16 +140,32 @@ p {
     cursor: pointer;
 }
 
-#btn-abrir-menu {
+#top-bar button {
     width: 72px;
     height: 72px;
     border-radius: 80px;
     align-items: center;
-    /* margin: 1vw 0% 0% 1vw; */
+    background-color: transparent;
     border: transparent;
     display: block;
+    color: #0056b3;
+    filter: var(--botoes-svg);
+    background: url('../res/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') no-repeat center;
 }
 
+#btn-fechar-menu {
+    width: 72px;
+    height: 72px;
+    border-radius: 80px;
+    align-items: center;
+    border: transparent;
+    display: block;
+    filter: var(--botoes-svg);
+    background: url('../res/menu_open_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') no-repeat center;
+}
+button img{
+    filter: var(--botoes-svg);
+}
 #form-contato {
     display: flex;
     flex-direction: column;
@@ -176,15 +194,6 @@ p {
     border-color: transparent;
     border-style: solid;
     /* border-color: ; */
-}
-
-#btn-fechar-menu {
-    width: 72px;
-    height: 72px;
-    border-radius: 80px;
-    align-items: center;
-    border: transparent;
-    display: block;
 }
 
 .nav-principal-bt {
