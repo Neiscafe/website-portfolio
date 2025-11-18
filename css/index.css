@@ -174,15 +174,16 @@ button img{
 }
 
 #form-contato [type="text"],
-#msg {
+#campo-msg {
     width: 60%;
+    background-color: var(--cor-sidebar);
+    color: var(--cor-texto);
     padding: 16px 16px 16px 16px;
     border-radius: 10px;
     border-width: 1px;
     margin-bottom: 20px;
     border-color: #dadada;
     border-style: solid;
-    /* border-color: ; */
 }
 
 #form-contato [type="button"] {
