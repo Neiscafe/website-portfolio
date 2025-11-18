@@ -21,10 +21,12 @@ export function configuraAlternaPaginas() {
         selecionaElemento(navItems, paginas, event.target);
         navBar.classList.add('invisivel');
     });
-    selecionaElemento(document.getElementById("nav-item-1"));
+    selecionaElemento(navItems, paginas, navItems[0]);
 }
 function selecionaElemento(navItems, paginas, target) {
-    if ( target == null || target.id == 'nav-principal-menu') {
+    if (target == null || target.id == 'nav-principal-menu') {
+        console.log("returning");
+        console.log("target "+target);
         return;
     }
     let iSelecionado = 0;
@@ -46,6 +48,7 @@ function selecionaElemento(navItems, paginas, target) {
     }
     navItems.forEach(function (element, i) {
         if (i == iSelecionado) {
+            console.log("selecionado "+i);
             element.classList.add('nav-bt-selecionado');
         } else {
             element.classList.remove('nav-bt-selecionado');
@@ -54,9 +57,6 @@ function selecionaElemento(navItems, paginas, target) {
     paginas.forEach(function (element, i) {
         if (i == iSelecionado) {
             element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            // element.classList.remove('invisivel');
-        } else {
-            // element.classList.add('invisivel');
         }
     });
 }
