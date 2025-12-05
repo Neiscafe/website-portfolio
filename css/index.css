@@ -64,7 +64,7 @@ img {
 
 body {
     display: flex;
-    width: 100%;
+    width: 60%;
     height: 100%;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -175,7 +175,7 @@ button img{
 
 #form-contato [type="text"],
 #campo-msg {
-    width: 60%;
+    width: 100%;
     background-color: var(--cor-sidebar);
     color: var(--cor-texto);
     padding: 16px 16px 16px 16px;
@@ -185,9 +185,12 @@ button img{
     border-color: #dadada;
     border-style: solid;
 }
+#erro-form{
+    color: red;
+}
 
 #form-contato [type="button"] {
-    width: fit-content;
+    width: 20%;
     padding: 16px 32px 16px 32px;
     border-radius: 40px;
     border-width: 1px;
@@ -249,7 +252,9 @@ button img{
     color: var(--cor-texto);
     flex-direction: column;
 }
+.container-portfolio{
 
+}
 #container-pagina h1 {
     font-size: 48px;
 }

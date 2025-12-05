@@ -7,9 +7,10 @@ export function configuraAlternaPaginas() {
     let paginas = [document.getElementById("sobre-mim"), document.getElementById("formacao"), document.getElementById("portfolio"), document.getElementById("contato")];
     let campoEmail = document.getElementById("campo-email");
     let campoMsg = document.getElementById("campo-msg");
+    let erroForm = document.getElementById("erro-form");
     navBar.classList.add('invisivel');
     document.getElementById("contato-submit").addEventListener('click', (event) => {
-        onButtonClick(event.target, campoEmail, campoMsg);
+        onButtonClick(event.target, campoEmail, campoMsg, erroForm);
     });
     btnFecharMenu.addEventListener('click', () => {
         navBar.classList.add("invisivel");
@@ -60,15 +61,27 @@ function selecionaElemento(navItems, paginas, target) {
         }
     });
 }
-async function onButtonClick(target, campoEmail, campoMsg) {
+async function onButtonClick(target, campoEmail, campoMsg, erroForm) {
+    console.log(erroForm);
+    if(campoEmail.value.length==0 || !campoEmail.value.includes('@')){
+        erroForm.textContent = "Email inválido!";
+        return;
+    }
+    if(campoMsg.value.length<10){
+        erroForm.textContent = "Mensagem pequena demais!";
+        return;
+    }
+    erroForm.textContent="";
     target.disabled = true;
     target.value = 'Carregando...';
     campoEmail.disabled = true;
     campoMsg.disabled = true;
     await new Promise(r => setTimeout(r, 1500));
     target.value = 'Enviado!';
-    await new Promise(r => setTimeout(r, 1000));
+    target.style.background = '#22e422';
+    await new Promise(r => setTimeout(r, 2000));
     target.value = 'Enviar';
+    target.style.background = '#007bff';
     campoEmail.disabled = false;
     campoMsg.disabled = false;
     target.disabled = false;
