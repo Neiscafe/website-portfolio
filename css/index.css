@@ -62,6 +62,12 @@ img {
     height: 300px;
 }
 
+#portfolio img {
+    border-radius: 0px;
+    width: 30%;
+    height: 80%;
+}
+
 body {
     display: flex;
     width: 60%;
@@ -165,9 +171,11 @@ p {
     filter: var(--botoes-svg);
     background: url('../res/menu_open_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') no-repeat center;
 }
-button img{
+
+button img {
     filter: var(--botoes-svg);
 }
+
 #form-contato {
     display: flex;
     flex-direction: column;
@@ -185,7 +193,8 @@ button img{
     border-color: #dadada;
     border-style: solid;
 }
-#erro-form{
+
+#erro-form {
     color: red;
 }
 
@@ -252,9 +261,9 @@ button img{
     color: var(--cor-texto);
     flex-direction: column;
 }
-.container-portfolio{
 
-}
+.container-portfolio {}
+
 #container-pagina h1 {
     font-size: 48px;
 }
@@ -354,6 +363,11 @@ input:checked+.slider:before {
         /* margin: 24px 0% 0% 24px; */
     }
 
+    #portfolio img {
+        border-radius: 0px;
+        width: 80%;
+        height: 80%;
+    }
 
     #nav-principal {
         /* display: inline; */
