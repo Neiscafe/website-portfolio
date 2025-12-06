@@ -1,30 +1,19 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
 
 <head>
     <meta charset="utf-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <title>Mobile Dev</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <!-- <meta name="description" content=""> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body class="roboto-title">
     <script type="module" src="js/gerencia-paginas.js"></script>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-    <!-- <script src="" async defer></script> -->
     <div id="overlay"></div>
     <nav id="nav-principal">
         <div id="nav-principal-header">
@@ -44,21 +33,21 @@
         </div>
         <ul id="nav-principal-menu">
             <li>
-                <button class="nav-principal-bt roboto-title" type="button" id="nav-item-1"><img
+                <a href="#sobre-mim" class="nav-principal-bt roboto-title" id="nav-item-1"><img
                         src="res/person_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"></img>SOBRE
-                    MIM</button>
+                    MIM</a>
             </li>
             <li>
-                <button class="nav-principal-bt roboto-title" type="button" id="nav-item-2"><img
-                        src="res/school_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"></img>FORMAÇÃO</button>
+                <a href="#formacao" class="nav-principal-bt roboto-title" type="button" id="nav-item-2"><img
+                        src="res/school_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"></img>FORMAÇÃO</a>
             </li>
             <li>
-                <button class="nav-principal-bt roboto-title" type="button" id="nav-item-3"><img
-                        src="res/work_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"></img>PORTFOLIO</button>
+                <a href="#portfolio" class="nav-principal-bt roboto-title" id="nav-item-3"><img
+                        src="res/work_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"></img>PORTFOLIO</a>
             </li>
             <li>
-                <button class="nav-principal-bt roboto-title" type="button" id="nav-item-4"><img
-                        src="res/mail_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"></img>CONTATO</button>
+                <a href="#contato" class="nav-principal-bt roboto-title" id="nav-item-4"><img
+                        src="res/mail_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"></img>CONTATO</a>
             </li>
         </ul>
     </nav>
@@ -67,6 +56,7 @@
             <button id="btn-abrir-menu" class="btn-abrir-menu roboto-text" aria-label="Abrir menu">
                 <!-- <img src="res/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"></img> -->
             </button>
+            <h2>Portfólio</h2>
         </div>
         <div id="container-pagina">
             <div class="pagina" id="sobre-mim">
@@ -187,11 +177,17 @@
                 <p>Deseja entrar em contato comigo? Preencha o formulário abaixo:</p>
                 <form id="form-contato">
                     <input type="text" class="roboto-text" placeholder="Seu e-mail" id="campo-email" name="email">
+                    <input type="text" class="roboto-text" placeholder="Seu nome" id="campo-nome" name="nome">
                     <textarea placeholder="Escreva uma mensagem" class="roboto-text" id="campo-msg"
                         name="msg"></textarea>
-                        <h3 id="erro-form"></h3>
+                    <h3 id="erro-form"></h3>
                     <input type="button" value="Enviar" id="contato-submit">
                 </form>
+            </div>
+        </div>
+        <div class="modal" id="modal">
+            <div class="modal-content" id="modal-content">
+                <p class="modal-msg" id="modal-msg"></p>
             </div>
         </div>
     </div>

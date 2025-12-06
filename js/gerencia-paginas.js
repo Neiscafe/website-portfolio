@@ -1,7 +1,9 @@
 import { configuraAlternador } from "./alterna-tema.js";
-import { configuraAlternaPaginas } from "./alterna-paginas.js";
+import { gerenciaFormMensagem } from "./gerencia-form-mensagem.js";
+import { gerenciaMenu } from "./gerencia-menu.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     configuraAlternador();
-    configuraAlternaPaginas();
+    gerenciaFormMensagem();
+    gerenciaMenu();
 })
